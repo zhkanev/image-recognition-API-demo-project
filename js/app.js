@@ -83,11 +83,11 @@ function getTags(e) {
 	let formData = new FormData();
 	formData.append('image', fileInput.files[0]);
 
-	let imageUrlRequest = new Request(`http://api.imagga.com/v2/tags?image_url=${url}&threshold=${threshold}&limit=${limit}&language=${lang}`, {
+	let imageUrlRequest = new Request(`https://api.imagga.com/v2/tags?image_url=${url}&threshold=${threshold}&limit=${limit}&language=${lang}`, {
 		headers: headers
 	});
 
-	let imageUploadRequest = new Request(`http://api.imagga.com/v2/tags?threshold=${threshold}&limit=${limit}&language=${lang}`, {
+	let imageUploadRequest = new Request(`https://api.imagga.com/v2/tags?threshold=${threshold}&limit=${limit}&language=${lang}`, {
 		method: 'POST',
 		headers: headers,
 		body: formData
@@ -185,11 +185,11 @@ function getCategory(e) {
 	let formData = new FormData();
 	formData.append('image', fileInput.files[0]);
 
-	let imageUrlRequest = new Request(`http://api.imagga.com/v2/categories/personal_photos?image_url=${url}&language=${lang}`, {
+	let imageUrlRequest = new Request(`https://api.imagga.com/v2/categories/personal_photos?image_url=${url}&language=${lang}`, {
 		headers: headers
 	});
 
-	let imageUploadRequest = new Request(`http://api.imagga.com/v2/categories/personal_photos?language=${lang}`, {
+	let imageUploadRequest = new Request(`https://api.imagga.com/v2/categories/personal_photos?language=${lang}`, {
 		method: 'POST',
 		headers: headers,
 		body: formData
@@ -287,11 +287,11 @@ function getColors(e) {
 	let formData = new FormData();
 	formData.append('image', fileInput.files[0]);
 
-	let imageUrlRequest = new Request(`http://api.imagga.com/v2/colors?image_url=${url}`, {
+	let imageUrlRequest = new Request(`https://api.imagga.com/v2/colors?image_url=${url}`, {
 		headers: headers
 	});
 
-	let imageUploadRequest = new Request(`http://api.imagga.com/v2/colors`, {
+	let imageUploadRequest = new Request(`https://api.imagga.com/v2/colors`, {
 		method: 'POST',
 		headers: headers,
 		body: formData

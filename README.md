@@ -20,6 +20,10 @@ Fetching server resources is handled by native Javascript [Fetch API](https://de
 * Your API key and API secret are presented on your profile dashboard [Documentation](https://docs.imagga.com/#getting-started-signup)
 * Paste your credentials in API credentials section on top
 
+## Demo
+
+[Here is a working live demo](https://zhkanev.github.io/image-recognition-API-demo-project/)
+
 ## Built With
 
 * [Imagga API](https://imagga.com/) - Image Recognition Solutions

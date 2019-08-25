@@ -13,8 +13,9 @@
 <body>
   <div class="container">
     <div class="page-header">
+
       <div class="row">
-        <div class="col-lg-12">
+        <div class="col-lg-6">
           <h1> Image recognition API project</h1>
           <span>Powered by</span><br>
           <a href="https://imagga.com/" target="_blank">
@@ -22,6 +23,29 @@
           </a>
           <span class="imagga-info"><em>Image Technologies API</em></span>
         </div>
+        <nav class="navbar navbar-light bg-light col-lg-6">
+          <button class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <!--  -->
+            <strong>API credentials</strong>
+            <img src="img/key-locked.svg" class="key-locked" alt="icon key">
+            <!-- <span class="fa fa-key">API credentials</span> -->
+            <!--  -->
+          </button>
+          <div class="collapse" id="navbarToggleExternalContent">
+            <!-- <h6>Put your API credentials</h6> -->
+            <div class="bg-light">
+              <div class="form-group">
+                <!-- <small class="form-text text-muted">Your API key will be validated by API</small> -->
+                <input class="form-control form-control-sm" type="text" placeholder="API Key" id="apikey">
+              </div>
+              <div class="form-group">
+                <input class="form-control form-control-sm" type="text" placeholder="API Secret" id="apisecret">
+              </div>
+            </div>
+          </div>
+        </nav>
       </div>
     </div>
     <div class="row">
@@ -84,7 +108,7 @@
                       </select>
                     </div>
                     <div class="col-lg-6">
-                      <button type="submit" id="submitAutoTag" class="btn btn-primary mx-auto">Submit</button>
+                      <button type="submit" id="submitAutoTag" class="btn btn-primary mx-auto">Analyse</button>
                     </div>
                   </div>
                 </div>
@@ -119,7 +143,7 @@
                     </div>
                     <div class="col-lg-12">
                       <div class="submit-btn">
-                        <button type="submit" id="submitCategorizer" class="btn btn-primary mx-auto">Submit</button>
+                        <button type="submit" id="submitCategorizer" class="btn btn-primary mx-auto">Analyse</button>
                       </div>
                     </div>
                   </div>
@@ -142,7 +166,7 @@
                   <small class="form-text text-muted">Insert image URL to extract colors</small>
                   <div class="col-lg-12">
                     <div class="submit-btn">
-                      <button type="submit" id="submitColors" class="btn btn-primary mx-auto">Submit</button>
+                      <button type="submit" id="submitColors" class="btn btn-primary mx-auto">Analyse</button>
                     </div>
                   </div>
                 </div>
@@ -196,6 +220,16 @@
       </div>
     </div>
   </footer>
+  <div class="alert text-center banner-consent" role="alert">
+    <span>All uploaded files remain available for 24 hours. After this period they are being
+      <a href="https://docs.imagga.com/#uploads" target="_blank">
+        automatically deleted</a>
+    </span>
+    <button type="button" class="btn btn-primary accept-cookie" aria-label="Close">
+      OK
+    </button>
+  </div>
+
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
   </script>

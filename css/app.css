@@ -23,6 +23,23 @@ h5 {
 	margin-bottom: 1.375rem;
 }
 
+h6 {
+	margin-bottom: 30px;
+}
+
+.navbar {
+	display: inline;
+}
+
+.navbar-toggler {
+	font-size: 1rem;
+}
+
+.bg-light {
+	background-color: #fff !important;
+	border: none;
+}
+
 .page-header {
 	padding: 1.25rem 0.625rem;
 }
@@ -37,6 +54,7 @@ h5 {
 span.imagga-info {
 	display: block;
 	margin-left: 5.625rem;
+	padding-bottom: 20px;
 }
 
 .inputURL.input-group.mb-3 {
@@ -57,6 +75,14 @@ button[type=submit]#submitAutoTag {
 
 .btn-link {
 	font-size: 1.063rem;
+}
+
+.navbar-toggler {
+	margin-bottom: 30px;
+}
+.key-unlocked, 
+.key-locked {
+	margin-left: 8px;
 }
 
 /* ------ API result container ------ */
@@ -263,11 +289,41 @@ div.bar-graph div.graph li.bar:hover span {
 	text-decoration: none;
 }
 
+/* ==================== Banner Consent  ==================== */
+
+.banner-consent {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	margin: 0 !important;
+	z-index: 1;
+	opacity: 0;
+	border-radius: 0;
+	transform: translateY(100%);
+	transition: all 500ms ease-out;
+	color: #ecf0f1;
+	background: rgba(69, 77, 89, 0.85);
+}
+
+.banner-consent.show {
+	opacity: 1;
+	transform: translateY(0);
+	transition-delay: 0.5s;
+}
+
+.accept-cookie {
+	margin-left: 20px;
+	padding: 8px 20px;
+	vertical-align: baseline;
+}
+
 /* ==================== Media Queries  ==================== */
 
 @media (max-width: 992px) {
 
 	h5 {
+		margin-bottom: 1rem;
 		text-align: center;
 	}
 
@@ -304,11 +360,11 @@ div.bar-graph div.graph li.bar:hover span {
 		font-size: 1.063rem;
 	}
 
-	h5 {
-		margin-bottom: 1rem;
+	footer {
+		margin: 30px 0;
 	}
-
 	p.about-project {
+		margin-bottom: 20px;
 		text-align: justify;
 	}
 }

@@ -18,8 +18,7 @@ Fetching server resources is handled by native Javascript [Fetch API](https://de
 
 * Register for a free [Imagga API](https://imagga.com/auth/signup/hacker)
 * Your API key and API secret are presented on your profile dashboard [Documentation](https://docs.imagga.com/#getting-started-signup)
-* Find and open app.js in js folder. On the top you will find apiKey and apiSecret variables
-* Replace your credentials
+* Paste your credentials in API credentials section on top
 
 ## Built With
 

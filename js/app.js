@@ -1,20 +1,4 @@
 
-const submitImages = document.querySelectorAll('.submit-image');
-
-submitImages.forEach(input => {
-	input.addEventListener('click', clearAll);
-});
-
-// The result-field class indicates from whitch field the request is sended
-
-function clearAll() {
-	submitImages.forEach(input => {
-		input.classList.remove('result-field');
-		input.value = '';
-	});
-	document.querySelector("#output").innerHTML = '';
-}
-
 // Input fields validation
 
 function validateCredentials() {
@@ -29,10 +13,10 @@ function validateCredentials() {
 	}
 
 	if (apiSecret == '' || apiSecret === null) {
-		document.querySelector('#apisecret').classList.add('is-invalid')
+		document.querySelector('#apisecret').classList.add('is-invalid');
 		return false;
 	} else {
-		document.querySelector('#apisecret').classList.remove('is-invalid')
+		document.querySelector('#apisecret').classList.remove('is-invalid');
 	}
 	return [apiKey, apiSecret];
 }
@@ -53,6 +37,24 @@ function formatString(str) {
 	return capitalizeEveryWord = compactWhitespace.replace(/\b[a-z]/g, char => char.toUpperCase());
 }
 
+// The result-field class indicates from whitch field the request is sended
+
+function clearInputs() {
+	const submitImages = document.querySelectorAll('.submit-image');
+	submitImages.forEach(input => {
+		input.addEventListener('click', () => 		
+		submitImages.forEach(input => {
+			input.classList.remove('result-field');
+			input.value = '';
+		}));
+		document.querySelector("#output").innerHTML = '';
+	});
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+	clearInputs();
+});
+
 document.querySelector("#form-auto-tagging").addEventListener("submit", getTags);
 
 function getTags(e) {
@@ -60,7 +62,7 @@ function getTags(e) {
 	let apiCredentials = validateCredentials();
 
 	if (!apiCredentials) {
-		alert("Put your credentials in the apiKey & apiSecret variables in the app.js file. If you don't have any you can register here: https://imagga.com/auth/signup/hacker ");
+		alert("Put your credentials in provided input fields. If you don't have any you can register here: https://imagga.com/auth/signup/hacker ");
 		return;
 	}
 
@@ -164,7 +166,7 @@ function getCategory(e) {
 	let apiCredentials = validateCredentials();
 
 	if (!apiCredentials) {
-		alert("Put your credentials in the apiKey & apiSecret variables in the app.js file. If you don't have any you can register here: https://imagga.com/auth/signup/hacker ");
+		alert("Put your credentials in provided input fields. If you don't have any you can register here: https://imagga.com/auth/signup/hacker ");
 		return;
 	}
 
@@ -266,7 +268,7 @@ function getColors(e) {
 	let apiCredentials = validateCredentials();
 
 	if (!apiCredentials) {
-		alert("Put your credentials in the apiKey & apiSecret variables in the app.js file. If you don't have any you can register here: https://imagga.com/auth/signup/hacker ");
+		alert("Put your credentials in provided input fields. If you don't have any you can register here: https://imagga.com/auth/signup/hacker ");
 		return;
 	}
 
